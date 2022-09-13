@@ -7,6 +7,12 @@ const arraySortInfo = (inputArray) => {
   if (inputArray.find((el) => typeof el !== "number")) {
     return "Some of the argument is not number";
   }
+  /*if (inputArray.find((el) => typeof el !== "number")) {
+    return "Some of the argument is not number";    
+    *here we can use some method as well, and even preferebly due to it can be situation when 
+    we have 'false' string i.e. empty string in array, and it will return true fo rour conditions in case of using find, but with somem method we solve this bug
+    */
+  }
   if (inputArray.every((el, i) => (i > 0 ? el >= inputArray[i - 1] : true))) {
     return "Array is sorted by ascend";
   }
